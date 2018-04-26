@@ -1,0 +1,80 @@
+.field-invalid{
+    border-color:#a94442;
+}
+.field-invalidmsg{
+    color:#a94442;
+    font-size: .28rem;
+    padding-top: 0.05rem;
+}
+.field-validmsg{
+	display: none;
+    visibility: hidden;
+    color:#3c763d;
+    font-size: .28rem;
+    padding-top: 0.05rem;
+}
+.field-tooltipWrap{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+.field-tooltipInner{
+    pointer-events: none;
+    display: table;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+.field-tooltip{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.field-tooltip .field-invalidmsg,
+.field-tooltip .field-validmsg{
+    color: #fff;
+}
+.field-tooltip .zvalid-resultformat{
+    display: inline-block;
+    position: relative;
+    background-color:rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
+    pointer-events: auto;
+    -webkit-animation: fieldTipBounceIn 0.2s ease-in-out;
+    animation: fieldTipBounceIn 0.2s ease-in-out;
+}
+
+@-webkit-keyframes fieldTipBounceIn{
+    from {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
+        filter: alpha(opacity=1);
+    }
+}
+
+@keyframes fieldTipBounceIn{
+    from {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
+        filter: alpha(opacity=1);
+    }
+}

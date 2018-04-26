@@ -1,0 +1,49 @@
+
+.Registration-details{
+  margin-top: 0.2rem;
+}
+  .tables-container{
+    &>div{
+      position: relative;
+      height: 0.9rem;
+      line-height: 0.9rem;
+      background: #fff;
+      overflow: hidden;
+      padding: 0 0.3rem;
+      border-bottom: 1px solid #e5e5e5;
+      >span:nth-child(1){
+        width: 30%;
+        font-size: 0.32rem;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+      >span:nth-child(2){
+        float: right;
+        color: #a3a3a3;
+        font-size: 0.28rem;
+        text-align: right;
+        overflow: hidden;        
+      }
+      .wordSpace{
+          word-spacing: 0.07rem;
+      }
+      .wordcost{
+          word-spacing: .54rem;
+      }
+    }
+    .affirpay{
+        >button{
+          width: 66%;
+          height: 0.8rem;
+          background-color: #01b2e3;
+          //margin: 0 auto;
+          font-size: 0.36rem;
+          margin-top: 1rem;
+          color: #fff;
+          position: absolute;
+          left:17%;
+          transition: background ease-in-out .1s;
+          box-shadow: 0 0px 6px 0 rgba(78,78,78,.8);
+        }
+    }
+  }

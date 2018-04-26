@@ -1,0 +1,159 @@
+
+.main{
+    padding-bottom: 0.2rem;
+    .personal{
+        padding: .2rem 0;
+        &-form{
+            .inbox{
+                display: flex;
+                align-items: center;
+                position: relative;
+                height: .9rem;
+                padding: 0 .3rem;
+                background: #fff;
+                border-bottom: 1px solid #e5e5e5;
+                label{
+                    float: left;
+                    width: 30%;
+                    margin-bottom: 0;
+                    font-size: .32rem;
+                    color: #313131;
+                    font-weight: bold;
+                    vertical-align: middle;
+                }
+                .urg{
+                    width: 40%;
+                }
+                .sexlabel,
+                .bloodlabel,
+                .edubg,
+                .jobl,
+                .nationality,
+                .postcode {
+                    word-spacing: .54rem;
+                }
+                input{
+                    float: right;
+                    width: 70%;
+                    color: #a3a3a3;
+                    font-size: .28rem;
+                    text-align: right;
+                    padding: 0.2rem 0;
+                    line-height: 0.35rem;
+                }
+                .urgtel{
+                    width: 60%;
+                }
+                .documents{
+                    width: 50%;
+                    //text-align: left;
+                }
+                select{
+                    // height: .8rem;
+                    color: #a3a3a3;
+                    font-size: .28rem;
+                    border: none;
+                    outline: 0;
+                    text-align: center;
+                    line-height: 0.36rem;
+                }
+                .sex, .document, .bloodtype, .education, .job, .country{             
+                    position: absolute;
+                    top: 0;
+                    right: 0.20rem;
+                    bottom: 0;
+                    margin: auto;
+                    padding-right: 0.32rem;
+                    direction: rtl;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    background: url(https://ohc5vthqm.qnssl.com/uipmImg/2017-8-1/arrow.png) no-repeat scroll right center transparent;
+                    background-position-y: 50%;
+                }
+                .document{
+                    position: inherit;
+                }   
+                .address{
+                    position: absolute;
+                    right: 0.3rem;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    width: 70%;
+                    height: 100%;
+                    overflow: hidden;
+                    .city{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .finshBtn{
+                position: relative;
+                height: .9rem;       
+                padding: 0 .3rem; 
+                margin-top: 0.2rem;            
+                text-align: center;
+                button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    color: #fff;
+                    font-size: .36rem;
+                    background-color: #01b2e3;
+                    border-radius: 2px;
+                    word-spacing: 10px;
+                    text-align: center;  
+                    transition: background ease-in-out .1s;
+                    box-shadow: 0 0px 6px 0 rgba(78,78,78,.8);
+                    >img{
+                        display: inline-block;
+                        width: 0.8rem;
+                        height: 100%;
+                    }               
+                }
+            }
+            .name-description, .birthDay-description, .tel-description, .email-description, .idcard-description, .urger-description, .urgtel-description{
+                text-align: right;
+                padding-right: 0.3rem;
+            }
+        }
+    }
+    // 修改密码
+    .changePwd, .myMatchs{
+        height: 0.9rem;
+        line-height: .9rem;
+        padding: 0 .3rem;
+        margin-bottom: .2rem;
+        background: #fff;
+        box-shadow: 0 0 2px #e5e5e5;
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #313131;
+            font-size: .32rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .spread{
+            position: relative;           
+            img{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                width: auto;
+                height: 40%;
+                margin: auto;              
+            }
+        }
+    }
+    .myMatchs{
+        margin-bottom: 0rem;
+    }
+}

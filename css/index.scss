@@ -1,0 +1,229 @@
+@import "./base.scss";
+@import "./config.scss";
+@import "./keys.scss";
+@import "./swiper.scss";
+@import "main.scss";
+@import "uipm.scss";
+@import "uipm-pe.scss";
+@import "match.scss";
+@import "match-detail.scss";
+@import "news.scss";
+@import "news-detail.scss";
+@import "player.scss";
+@import "player-detail.scss";
+@import "user.scss";
+@import "perfect-data.scss";
+@import "Registration-details.scss";
+@import "payment-result.scss";
+@import "reset-msg.scss";
+@import "personal.scss";
+@import "autoLogin.scss";
+@import "validate.scss";
+@import "datepicker.scss";
+@import "area.scss";
+
+html{
+  font-size: 100px;
+}
+body{
+  font-size: .24rem;
+  background:#fff;
+}
+html,body{
+  height:100%;
+  display: block;
+}
+#app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    max-width: 750px;
+    margin:auto;
+    z-index: 1;
+    -moz-transition: all cubic-bezier(.165,.84,.44,1) 0.3s;
+    -o-transition: all cubic-bezier(.165,.84,.44,1) 0.3s;
+    transition: all cubic-bezier(.165,.84,.44,1) 0.3s;
+}
+.appbg{
+    background: #f2f2f2;
+}
+.appbgImg{
+    background-image: url(../img/login_bg.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/*网页头部title*/
+.com-title{
+    height: 100%;
+    margin-left: -0.2rem;
+    line-height: .9rem;
+    p{
+        color: #fff;
+        font-size: .36rem;
+    }
+}
+
+/*按钮背景颜色*/
+.btnbgColor{
+    background: rgb(0,152,227)!important;
+    // transition: all cubic-bezier(.165,.84,.44,1) .3s;
+}
+
+/*移动端1pxborder*/
+.mborder:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    transform:scale(1,0.5);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/*三角形*/
+.triangle{
+    position: absolute;
+    top: 0;
+    left: -.56rem;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-width: .3rem;
+    border-style: solid dashed dashed;
+    border-color: #fff transparent transparent;
+    transform:rotateZ(90deg);
+}
+.clear:after{   
+    content:"";/*里面可以为空、内容的意思*/
+    visibility:hidden; /*隐藏*/
+    height:0;
+    display:block;
+    clear:both;
+    overflow:hidden;
+}
+.clear{
+    zoom: 1;/*这个转为解决IE6的bug的*/
+}
+/*首页图片加载图*/
+.page-loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    >img{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin: auto;
+    }
+} 
+/* loading */
+#loadbox, #loading,#loadmsg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+    #load{
+        position: fixed;
+        top: 0.45rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 1.4rem;
+        height: 1.4rem;
+        margin: auto;
+        overflow: hidden;
+        img{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+/*加载列表*/
+#loadmsg{
+    top: 0.9rem;
+} 
+.fadeout{
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-transition: opacity ease-in-out 0.3s;
+    -o-transition: opacity ease-in-out 0.3s;
+    transition: opacity ease-in-out 0.3s;
+}
+
+// dropload
+.dropload-up,.dropload-down{
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    font-size: 14px;
+    /* 开启硬件加速 */
+    -webkit-transform:translateZ(0);
+    transform:translateZ(0);
+}
+.dropload-down{
+    height: 50px;
+}
+.dropload-refresh,.dropload-update,.dropload-load,.dropload-noData{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    >i{
+        display: inline-block;
+        margin-top: -5px;
+        padding: 0;
+        font-size: 0.4rem;
+        vertical-align: middle;
+        transition: transform 0.24s ease-in-out;
+    }
+    .icondown{
+        transform:rotateZ(-180deg); 
+    }
+}
+.dropload-load img{
+    display: inline-block;
+    height: 60%;
+    width: auto;
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+.opacity{
+    -webkit-animation: opacity 0.3s linear;
+    animation: opacity 0.3s linear;
+}
+@-webkit-keyframes opacity {
+    0% {
+        opacity:0;
+        filter: alpha(opacity=0);
+    }
+    100% {
+        opacity:1;
+        filter: alpha(opacity=1);
+    }
+}
+@keyframes opacity {
+    0% {
+        opacity:0;
+        filter: alpha(opacity=0);
+    }
+    100% {
+        opacity:1;
+        filter: alpha(opacity=1);
+    }
+}

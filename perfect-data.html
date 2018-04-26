@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html id="html">
+
+<head>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>国际现代五项联盟</title>
+    <script>
+        var width = window.innerWidth || window.screen.width;
+        document.getElementById("html").style.fontSize = (width > 750 ? 750 : width)/750*100 + 'px';
+    </script>
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+
+<body class="page-index">
+  	<!-- 侧滑导航栏 -->
+  	<div class="nav">
+	    <div class="menu">
+	        <h3 class="menu-head"></h3>
+	        <ul class="olist">
+	            <li><a href="index.html">首页</a></li>
+	            <li><a href="news.html">新闻</a></li>
+	            <li><a href="uipm.html">UIPM旗下运动</a></li>
+	            <li><a href="uipm-pe.html">国际现代五项联盟</a></li>         
+	            <li><a href="match.html">赛事</a></li>
+	            <li><a href="player.html">运动员</a></li>          
+	        </ul>
+	        <div id="logout" class="logout">
+	        	<button type="button">退出登录</button>
+	        </div>
+	        <div class="linkbox">
+	        	<ul id="links" class="links">
+	        		<li><a href="http://v.qq.com/vplus/33727a5748cdcac73af0bd5d16188422"><img src="./img/tencent.png" alt="" /></a></li>
+	        		<li class="wxli"><a href="javascript:;"><img src="./img/weixin.png" alt="" /></a></li>
+	        		<li><a href="http://weibo.com/u/5593447969?topnav=1&wvr=6&topsug=1"><img src="./img/sina.png" alt="" /></a></li>
+	        	</ul>
+	        </div>
+	    </div>
+    	<!-- 蒙层 -->
+    	<div class="nav-drop"></div>
+    	<!-- 顶部背景 -->
+    	<div class="top-bgcolor"></div>
+    	<!--微信-->
+	    <div class="wxmark" id="wxmark">
+	    	<div class="wxmark-box">
+	    		<h3>国际现代五项联盟公众号</h3>
+		    	<div class="qrcode">
+		    		<img src="img/uipmWX.jpg"/>
+		    	</div>
+		    	<div class="scan">
+		    		<p>扫描二维码关注UIPM公众号</p>  		
+		    	</div>
+	    	</div>	
+	    </div>
+  	</div>
+  	<!-- 内容 -->
+  	<div id="app" class="appbg">
+	    <!-- 头部 -->
+	  	<div class="header-container">
+	      	<div class="header">
+	          	<div class="header-btn">
+	              	<div class="menu-button">
+	              		<img src="./img/Slide-nav.png">
+	              	</div>
+	          	</div>
+	          	<div class="com-title">
+					<p>完善资料</p>
+	          	</div>
+	          	<div class="reglogin">
+	                <a href="user.html">
+	                    <img src="./img/user.png">
+	                </a>
+	          	</div>
+	      	</div>
+	  	</div>
+	  	<!--主要内容-->
+	    <div class="main">
+	        <div class="warn-msg">
+	            <span>*</span>申请报名需要先完善您的个人资料
+	        </div>
+	        <form id="perfect-form" class="perfect-form">
+	            <div class="contents">
+	                <label for="name">真实姓名：</label>
+	                <input type="text" class="f1" id="name"
+	                	data-required="true" data-validate="name" data-describedby="name-description" >
+	            </div>
+	            <div id="name-description" class="name-description"></div>
+	            <div class="contents">
+	                <label class="sexlabel" for="sex">性 别：</label>
+	                <select class="gender" id="sex">
+	                    <option value="1">男</option>
+	                    <option value="2">女</option>
+	                </select>
+	            </div>
+	            <div class="contents">
+	                <label for="birth">出生日期：</label>
+	                <input type="text" id="birth" readonly="">
+	            </div>
+	            <div class="contents">
+	                <label for="tel">手机号码：</label>
+	                <input type="number" id="tel" class="f1" 
+	                	data-required="true" data-validate="tel" data-describedby="tel-description" >
+	            </div>
+	            <div id="tel-description" class="tel-description"></div>
+	            <div class="contents">
+	                <label for="email">电子邮箱：</label>
+	                <input type="text" id="email" class="f1" 
+	                	data-required="true" data-validate="email" data-describedby="email-description" >
+	            </div>
+	            <div id="email-description" class="email-description"></div>
+	            <div class="contents">
+	                <label for="idInput">证件类型：</label>
+	                <select id="idtype" class="idtype">
+	                    <option>身份证</option>
+	                    <option>护照</option>
+	                    <option>军官证</option>
+	                </select>
+	                <input type="text" id="idInput" class="idcard" 
+	                	data-required="true" data-validate="idcard" data-describedby="idcard-description" >
+	            </div>
+	            <div id="idcard-description" class="idcard-description"></div>
+	            <div class="contents">
+	            	<label for="urger">紧急联系人：</label>
+	            	<input type="text" id="urger" class="f1" 
+	            		data-required="true" data-validate="urger" data-describedby="urger-description" >
+	            </div>
+	            <div id="urger-description" class="urger-description"></div>
+	            <div class="contents">
+	            	<label for="urgtel" class="urg">紧急联系人电话：</label>
+	            	<input type="number" id="urgtel" class="urgtel" 
+	            		data-required="true" data-validate="urgtel" data-describedby="urgtel-description" >
+	            </div>
+	            <div id="urgtel-description" class="urgtel-description"></div>
+	            <div id="nextStep" class="nextStep appbg">
+	            	<!--<a href="##">-->
+            		<button type="submit">下一步</button>
+	        		<!--</a>-->
+	            </div>
+	            
+	        </form>
+	    </div>
+    	<!-- 加载中... -->
+	  	<div id="loadbox">
+	    	<div id="load">
+	      		<img src="https://ohc5vthqm.qnssl.com/syshu/2017-12-04/looading.svg" alt="">
+	    	</div>
+	  	</div>
+	</div>
+  	<script src="js/core.js"></script>
+  	<script src="js/zepto-mvalidate.js"></script>
+  	<script src="js/iscroll.js"></script>
+  	<script src="js/datepicker.js"></script>
+  	<script src="js/index.js"></script>
+  	<script src="js/perfect.js"></script>
+</body>
+</html>

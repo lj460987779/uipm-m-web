@@ -1,0 +1,107 @@
+
+.main{
+  width: 100%;
+  position: absolute;
+  top:0.9rem;
+  .warn-msg{
+    width: 100%;
+    height: 0.6rem;
+    padding-left: 0.2rem;
+    color: #313131;
+    font-size: 0.24rem;
+    line-height: 0.6rem;
+    &>span{
+      color: #f55949;
+    }
+  }
+  .perfect-form{
+    width: 100%;
+    height: 100%;
+    .contents{
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 0.9rem;
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      >label{
+        width: 30%;
+        font-size: 0.32rem;
+        font-weight: bold;
+        margin-bottom: 0;
+        vertical-align: middle;
+      }
+      .sexlabel{
+        word-spacing: .54rem;
+      }
+      >input{
+        float: right;
+        width: 70%;
+        // height: 100%;
+        color: #a3a3a3;
+        font-size: .28rem;
+        text-align: right;
+        padding: 0.2rem 0;
+        line-height: 0.35rem;
+      }
+      .idcard{
+        width: 50%;
+      }
+      >select{
+        height: .8rem;
+        color: #a3a3a3;
+        font-size: .28rem;
+        border: none;
+        outline: 0;
+        text-align: center;
+        line-height: 0.35rem;
+      }
+      .gender, .idtype{
+        position: absolute;
+        top: 0;
+        right: 0.20rem;
+        bottom: 0;
+        margin: auto;
+        padding-right: 0.3rem;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background: url(https://ohc5vthqm.qnssl.com/uipmImg/2017-8-1/arrow.png) no-repeat scroll right center transparent;
+        background-position-y: 50%;
+      }
+      .idtype{
+        position: inherit;
+      }
+      /*紧急联系*/
+      .urg{
+        width: 40%; 
+      }
+      .urgtel{
+        width: 60%;
+      }
+    }
+    .nextStep{
+      padding-top: 1rem;
+      height: 0.9rem;
+      //a{
+        >button{
+          position: absolute;
+          left:17%;
+          width: 66%;
+          height: 0.8rem;
+          color: #fff;
+          font-size: 0.36rem; 
+          background: #01b2e3;  
+          transition: background ease-in-out .1s;   
+          box-shadow: 0 0px 6px 0 rgba(78,78,78,.8);  
+        }
+      //}
+    }
+    .name-description, .tel-description, .email-description, .idcard-description, .urger-description, .urgtel-description{
+        text-align: right;
+        padding-right: 0.2rem;
+    }
+  }
+}

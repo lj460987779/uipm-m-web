@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html id="html">
+
+<head>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>国际现代五项联盟</title>
+    <script>
+        var width = window.innerWidth || window.screen.width;
+        document.getElementById("html").style.fontSize = (width > 750 ? 750 : width)/750*100 + 'px';
+    </script>
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+
+<body class="page-index">
+  	<!-- 侧滑导航栏 -->
+  	<div class="nav">
+	    <div class="menu">
+	        <h3 class="menu-head"></h3>
+	        <ul class="olist">
+	            <li><a href="index.html">首页</a></li>
+	            <li><a href="news.html">新闻</a></li>
+	            <li><a href="uipm.html">UIPM旗下运动</a></li>
+	            <li><a href="uipm-pe.html">国际现代五项联盟</a></li>         
+	            <li><a href="match.html">赛事</a></li>
+	            <li><a href="player.html">运动员</a></li>          
+	        </ul>	   
+	        <div class="linkbox">
+	        	<ul id="links" class="links">
+	        		<li><a href="http://v.qq.com/vplus/33727a5748cdcac73af0bd5d16188422"><img src="./img/tencent.png" alt="" /></a></li>
+	        		<li class="wxli"><a href="javascript:;"><img src="./img/weixin.png" alt="" /></a></li>
+	        		<li><a href="http://weibo.com/u/5593447969?topnav=1&wvr=6&topsug=1"><img src="./img/sina.png" alt="" /></a></li>
+	        	</ul>
+	        </div>
+	    </div>
+	    <!-- 蒙层 -->
+      <div class="nav-drop"></div>
+      <!-- 顶部背景 -->
+      <div class="top-bgcolor"></div>
+    	<!--微信-->
+	    <div class="wxmark" id="wxmark">
+	    	<div class="wxmark-box">
+	    		<h3>国际现代五项联盟公众号</h3>
+		    	<div class="qrcode">
+		    		<img src="img/uipmWX.jpg"/>
+		    	</div>
+		    	<div class="scan">
+		    		<p>扫描二维码关注UIPM公众号</p>  		
+		    	</div>
+	    	</div>	
+	    </div>
+  	</div>
+  	<!-- 内容 -->
+  	<div id="app" class="appbgImg">
+  		<!--头部-->
+      	<div class="header-container">
+          	<div class="nav-wrapper">
+              	<div class="header return-header">
+					<div class="header-btn">
+		              	<a class="return-button" href="javascript:window.history.go(-1)">
+		                    <img src="./img/back.png">
+		                </a>
+	          		</div>
+                  	<div class="com-title">
+						<p>忘记密码</p>
+	          		</div>
+                  	<div class="reglogin">
+                      	<!--<a href="user.html">
+                          	<img src="./img/user.png">
+                      	</a>-->
+                  	</div>
+              	</div>
+          	</div>
+      	</div>
+      	<!--表单区-->
+      	<div class="structure regiContent">
+          	<div class="fromBox opacity">
+              	<div id="form" class="form">          
+                  	<div id="form-container" class="form-container" style="margin-top: 0.5rem;">           
+                      	<!--忘记密码表单-->
+                      	<form id="fogetForm">
+                          	<div class="inputs">
+                              	<div class="telint">
+                                  	<input type="number" id="usertel" class="usertel" placeholder="请输入手机号" data-validate="phone" data-describedby="phone-description">
+                              	</div>
+                              	<div id="phone-description"></div>
+                              	<div class="verint">
+                                  	<input type="number" class="vercode" id="vercode" placeholder="验证码" data-required="true" data-validate="vercode" data-describedby="vercode-description">
+                                  	<input type="button" id="codeBtn1" value="发送验证码" /> 
+                              	</div>
+                              	<div id="vercode-description"></div>
+                              	<div class="pwdint">
+                                  	<input type="password" id="userpwd" class="userpwd" placeholder="设置8-16位密码" data-required="true" data-validate="password" data-describedby="password-description">
+                              	</div>
+                              	<div id="password-description"></div>
+                          	</div>
+                          	<div id="finshaff" class="finshBtn">
+                              	<button type="submit">确 认</button>
+                          	</div>
+                      	</form>
+                  	</div>
+              	</div>
+          	</div>
+      	</div>
+        <!-- 加载中... -->
+        <div id="loadbox">
+          <div id="load">
+              <img src="https://ohc5vthqm.qnssl.com/syshu/2017-12-04/looading.svg" alt="">
+          </div>
+        </div>
+  	</div>
+  	<script src="js/core.js"></script>
+  	<script src="js/zepto-mvalidate.js"></script>
+  	<script src="js/index.js"></script>
+  	<script src="js/forgetP.js"></script>
+</body>
+</html>

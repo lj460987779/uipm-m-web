@@ -1,0 +1,521 @@
+/*侧滑导航*/
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 77;
+    transform: translate3d(-100%,0,0);
+    -moz-transition: all cubic-bezier(.165,.84,.44,1) 0.3s;
+    -o-transition: all cubic-bezier(.165,.84,.44,1) 0.3s;
+    transition: all cubic-bezier(.165,.84,.44,1) 0.3s;
+    .menu{
+        position: absolute;
+        width: 70%;
+        height: 100%;
+        padding-top: .7rem;
+        overflow-y: auto;
+        z-index: 99;
+        background-color: #0B4B95;
+        background-image: url(../img/slider-bg.png);
+        background-position: 0 100%;
+        background-size: 140% 50%;
+        background-repeat: no-repeat;
+        box-shadow: 0px 0px 50px #333;
+        &-head{
+            height: .45rem;
+            margin-bottom: .8rem;
+            background-image: url("https://ohc5vthqm.qnssl.com/uipmImg/2017-6-29/indexLogo.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: contain;
+        }
+        .olist{
+            >li{
+                height: .7rem;           
+                margin-bottom: .3rem;
+                transition: all ease-in-out 0.3s;
+                >a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    color: #fff;
+                    line-height: .7rem;
+                    font-size: .36rem;
+                    text-align: center;
+                    text-decoration: none;
+                    vertical-align: middle;
+                }
+            }
+            .libg, .current{
+                background: #01b3e3;
+            }
+        }
+        // 退出登录
+        .logout{
+            display: none;
+            width: 100%;
+            height: 0.7rem; 
+            margin-top: 0.4rem;
+            text-align: center;
+            button{
+                width: 60%;
+                height: 100%;
+                color: #fff;
+                font-size: 0.3rem;
+                border: 1px solid #fff; 
+                border-radius: 3px;
+            }
+        }
+        // 显示退出登录
+        .hiddenLog{
+            display: block;
+        }
+        
+        //链接
+        .linkbox{
+            position: absolute;
+            bottom: .6rem;
+            width: 100%;
+            .links{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                >li{
+                    margin-right: .4rem;
+                    >a{
+                        display: block;
+                        width: .8rem;
+                        height: .8rem;
+                        >img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                } 
+                >li:last-child{
+                    margin-right: 0;
+                }         
+            }
+        }
+    }
+    //微信
+    .wxmark{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        text-align: center;
+        background-color: rgb(51, 51, 51);
+        &-box{
+            z-index: 999;
+            >h3{
+                color: #fff;
+                font-size: .36rem;
+                padding-top: .8rem; 
+                margin-bottom: .3rem;
+            }
+            .qrcode{
+                width: 3.6rem;
+                height: 3.6rem;
+                margin: 0 auto;
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .scan{
+                width: 50%; 
+                height: .6rem; 
+                line-height: .4rem;             
+                text-align: center;
+                padding: 0.1rem;  
+                border-radius: 100px;         
+                background-color: #232323; 
+                margin: .3rem auto 0 auto;
+                box-shadow: inset 0 5px 10px -5px #191919, 0 1px 0 0 #444;          
+                p{
+                    color: #fff;
+                    font-size: .28rem;                             
+                }             
+            }
+        }       
+    }
+    .top-bgcolor{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: .9rem;
+      background-color: #0b4b95;
+      transition: backgroundColor 0.3s ease-in-out;
+    }
+}
+/*滑入nav*/
+.navShow{
+    transform: translate3d(0,0,0);
+    // box-shadow: 0px 0px 50px #333;
+    /*蒙层*/
+    .nav-drop{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        z-index: 88;
+        // background: rgba(152,152,152,.5);
+        background: transparent;
+        transition: background 350ms cubic-bezier(.165,.84,.44,1);
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+/*滑动app*/
+.appMove{
+    transform: translate3d(70%,0,0);
+    position: fixed!important;
+}
+/*内容头部样式*/
+.header-container{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 0.9rem;
+  background-color: #0B4B95;
+  z-index: 19;
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding:0 0.2rem;
+    background: #0B4B95;
+    z-index: 19;
+    &-btn{
+      height: 0.9rem;
+      //background: #0B4B95;
+      .menu-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: .9rem;
+        height: 100%;
+        cursor: pointer;
+        img{
+          width: 50%;
+          height: 40%;
+        }
+      }
+    }
+    &-banner{
+      flex: 1;
+      height: .45rem;
+      background-image: url("https://ohc5vthqm.qnssl.com/uipmImg/2017-6-29/indexLogo.png");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+    }
+    .reglogin{
+      display: flex;
+      align-items: center;
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 0.9rem;
+        img{
+          display: block;
+          width: 50%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+/*主内容样式*/
+.main{
+  .page1{
+    position: relative;
+    background-image: url(../img/index.jpg);
+    background-size: cover;
+    background-position: 50% 0;
+    width: 100%;
+    height: 4rem;
+    display: block;
+  }
+  .page2{
+    position: relative;
+    background: url(../img/Upcoming-events-bg.jpg) no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    height: 4rem;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+    .inner{
+      height:4rem;
+      .isapply{
+        position: absolute;
+        bottom: 0.52rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.6rem;
+        height: 0.7rem;
+        line-height: 0.7rem;
+        color: #fff;
+        font-size: 0.31rem;
+        border: 0.02rem solid #fff;
+        box-shadow: 0 0 2px #09379c;
+      }
+      &>span{
+        display: block;
+        color: #fff;
+      }
+      &>span:nth-child(1){
+        width: 1.6rem;
+        height: 0.58rem;
+        background:#00b3ee;
+        font-size: 0.3rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 0.58rem;
+        margin-bottom: 0.36rem;
+      }
+      &>span:nth-child(2){
+        font-size: 0.28rem;
+        margin-bottom: 0.18rem;
+      }
+      &>span:nth-child(3){
+        font-size: 0.36rem;
+        margin-bottom: 0.36rem;
+        font-weight: bold;
+      }
+      &>span:nth-child(4){
+        &>img{
+          width: 0.46rem;
+          height: 0.3rem;               
+        }
+        &>p{
+          font-size: 0.24rem;
+          display: inline-block;
+          margin-left: 0.2rem;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .page3{
+    background: url(../img/news-bg.jpg)  no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 4rem;
+    position: relative;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+    .mask{
+      width: 100%;
+      height: 2.5rem;
+      opacity: 0.5;
+      position: absolute;
+      bottom: 0;
+      left:0;
+      right: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%);
+    }
+    .inner{
+      width: 100%;
+      height: 4rem;
+      position: relative;
+      //z-index: 88;
+      .p3-1{
+        position: absolute;
+        right: 0;
+        top:0;
+        width: 1.6rem;
+        height: 0.58rem;
+        background:#00b3ee;
+        font-size: 0.3rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 0.58rem;
+        color: #fff;
+      }
+      .p-box{
+          position: absolute;
+          bottom: 0.3rem;
+          width: 5rem;
+          color: #fff;
+          z-index: 88;
+          .p3-2{       
+            font-size: 0.36rem;
+            font-weight: bold;          
+            line-height: 0.5rem;                     
+        }
+        .p3-3{
+            font-size: 0.24rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;                                                
+        }
+      }     
+    }
+  }
+  .page4{
+    position: relative;
+    background: url(../img/uipmsports.png) no-repeat;
+    background-size: 80% 100%;
+    background-position: 215% 0;
+    width: 100%;
+    height: 4rem;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+    overflow: hidden;
+    .inner{
+      width: 100%;
+      height: 4rem;
+      position: relative;
+      .p4-1{
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 1.6rem;
+        height: 0.58rem;
+        background:#00b3ee;
+        font-size: 0.3rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 0.58rem;
+        color: #fff;
+      }
+      .p4-2{
+        position: absolute;
+        top:1.18rem;
+        left:0;
+        font-size: 0.36rem;
+        font-weight: bold;
+      }
+      .p4-3{
+        position: absolute;
+        top:1.58rem;
+        left:0;
+      }
+      .p4-4{
+        position: absolute;
+        top:2rem;
+        left:0;
+        width: 3.0rem;
+        text-align: justify;
+      }
+    }
+  }
+  .page5{
+    position: relative;
+    background: url(../img/czr.JPG) no-repeat;
+    background-size: cover;
+    background-position: 0% 0%;
+    width: 100%;
+    height: 4rem;
+    padding-left: 0.4rem;
+    .inner{
+      width: 100%;
+      height: 4rem;
+      position: relative;
+      .p5-1{
+        position: absolute;
+        right: 0.4rem;
+        top:0;
+        width: 1.6rem;
+        height: 0.58rem;
+        background:#00b3ee;
+        font-size: 0.3rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 0.58rem;
+        color: #fff;
+        z-index: 9;
+      }
+    }
+    .f{
+        position: absolute;     
+        right:0;
+        display: flex;
+        align-items: center;
+        width: 3.4rem;
+        height: 100%;      
+        background: #fff;
+        padding-left: 0.36rem;
+        
+      &-box{
+        width: 100%;       
+        .p5-2{
+            font-size: 0.24rem;
+            margin-bottom: 0.15rem;
+        }
+        .p5-3{
+            font-size: 0.3rem;
+            font-weight: bold;
+            color: #313131;
+            margin-bottom:0.4rem;
+        }
+        .p5-4{
+            width:0.6rem;
+            height: 0.38rem;
+            &>img{
+                width: auto;
+                height: 100%;
+            }
+        }
+      }
+
+    }
+  }
+  .page6{
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+    background: #fff;
+    .inner{
+      width: 100%;
+      height: 3rem;
+      position: relative;
+      .p6-1{
+        width: 1.6rem;
+        height: 0.58rem;
+        background:#00b3ee;
+        font-size: 0.3rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 0.58rem;
+        color: #fff;
+      }
+      .p6-2{
+
+        &>ul{
+          display: -webkit-flex;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          &>li{
+              &>img{
+                width: 1.5rem;
+                height: auto;
+              }
+          }
+        }
+      }
+    }
+  }
+}
+
+::-webkit-input-placeholder{
+  color:#a3a3a3;
+}

@@ -1,0 +1,78 @@
+
+.resetPwd{
+  position: absolute;
+  top: .9rem;
+  width: 100%;
+  margin-top: .2rem;
+  &-form{
+    margin-bottom: 0.1rem;
+    >input{
+      width: 100%;
+      background: #fff;
+      color: #a3a3a3;
+      font-size: 0.32rem;
+      line-height: 0.42rem;
+      padding: 0.23rem 0.4rem;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    >button{
+      position: absolute;
+      left:17%;
+      width: 66%;
+      height: 0.8rem;
+      color: #fff;
+      font-size: 0.36rem;
+      margin-top: 1rem;
+      background: #01b2e3;
+      border-radius: 2px;
+      word-spacing: 10px;
+      transition: background ease-in-out .1s;
+      box-shadow: 0 0px 6px 0 rgba(78,78,78,.8);
+    }
+    .oldpwd-description, .newpwd-description, .confirmpwd-description{
+      padding-left: 0.4rem;
+    }
+  }
+  .showPwd{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 0.36rem;
+    line-height: 0.36rem;
+    padding-left: 0.3rem;
+    > span{
+      position: relative;
+      display: inline-block;
+      width: 0.36rem;
+      height: 100%;
+      border: 1px solid #01b2e3;
+      border-radius: 100%;
+      vertical-align: middle;
+      > i{
+        position: absolute;
+        top: 2px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        color: #01b2e3;
+        font-size: 0.38rem;
+        border-radius: 100%;
+      }
+    } 
+    .bnone {
+      border: none;
+    }
+    > label{
+      color: #555;
+      font-size: .3rem;  
+      margin-bottom: 0;
+      padding: 0.06rem 0 0 0.05rem;
+      font-weight: normal;
+      vertical-align: middle;
+    }
+  }
+}

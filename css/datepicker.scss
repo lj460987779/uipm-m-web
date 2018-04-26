@@ -1,0 +1,113 @@
+#datePlugin {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.6);
+  // transition: all ease-out 0.3s;
+  // transform-origin:80% 28% 0!important;
+}
+#datePlugin * {
+  margin: 0;
+  padding: 0;
+  background-clip: padding-box;
+}
+#datePlugin .datemark {
+  width: 100%;
+  height: 100%;
+  //position: absolute;
+  z-index: 108;
+}
+#datePlugin .d-date-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  animation: slideInUp .3s;
+}
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0)
+  }
+  to {
+    transform: translate3d(0, 0, 0)
+  }
+}
+#datePlugin .d-date-title {
+  padding: 10px;
+  color: #01b2e3;
+  font-size: 0.30rem;
+  text-align: left;
+  font-weight: 700;
+}
+#datePlugin .d-date-info {
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+#datePlugin .d-date-wrap {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+#datePlugin .d-time-wrap {
+  border-top: 1px solid #f70;
+}
+#datePlugin .d-time-wrap .d-date-cell {
+  width: 50%;
+}
+#datePlugin .d-date-mark {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #eee;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+#datePlugin .d-date-cell {
+  float: left;
+  width: 33.33333%;
+  height: 100%;
+  overflow: hidden;
+}
+#datePlugin .d-date-cell li {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+#datePlugin .d-date-btns .d-btn {
+  display: inline-block;
+  width: 50%;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 0;
+  margin-top: 10px;
+  background: #01b2e3;
+}
+//#datePlugin .d-date-btns #d-okBtn {
+///*    background: #f70;*/
+///*border-bottom-left-radius: 5px;*/
+//border-right: 1px solid #ddd;
+//}
+#datePlugin .d-date-btns #d-cancleBtn {
+  color: #333;
+  background: #e6e6e6;
+}
+/*显示日期选择器*/
+.showDate{
+    display: block!important;
+    opacity: 1;
+    transform: scale(1, 1);
+}
