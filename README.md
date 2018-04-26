@@ -7,7 +7,6 @@
 
 > node-sass的问题。改为使用cnpm安装。或单独cnpm安装node-sass
 
-> 项目参照家春秋移动端项目
 
 
 ## 开发环境
